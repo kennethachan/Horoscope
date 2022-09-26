@@ -29,6 +29,12 @@
   height: 300px;
 }
 
+.hr {
+border: 1px solid black;
+width: 600px;
+margin-bottom: 50px;
+}
+
 .horoscope {
   width: 600px;
   margin-right: auto;

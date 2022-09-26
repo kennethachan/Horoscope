@@ -49,6 +49,9 @@ function AriesHoroscope(props) {
         Back to Sun Signs
       </p>
       <img src={time}></img>
+
+      <h1 className="sign-title">Aries</h1>
+      <hr className="hr"></hr>
       <div className="horoscope">
         <h3>Yesterday</h3>
         <p>{yesterday.horoscope}</p>

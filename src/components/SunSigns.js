@@ -47,77 +47,99 @@ function SunSigns(props) {
         <img
           className="sign-img"
           src={taurus}
-          onClick={() => setSelectedSign(signs[1])}
+          onClick={() => {
+            navigate(`/taurus-horoscope`)
+          }}
         ></img>
       </div>
       <div className="sign">
         <img
           className="sign-img"
           src={gemini}
-          onClick={() => setSelectedSign(signs[2])}
+          onClick={() => {
+            navigate(`/gemini-horoscope`)
+          }}
         ></img>
       </div>
       <div className="sign">
         <img
           className="sign-img"
           src={cancer}
-          onClick={() => setSelectedSign(signs[3])}
+          onClick={() => {
+            navigate(`/cancer-horoscope`)
+          }}
         ></img>
       </div>
       <div className="sign">
         <img
           className="sign-img"
           src={leo}
-          onClick={() => setSelectedSign(signs[4])}
+          onClick={() => {
+            navigate(`/leo-horoscope`)
+          }}
         ></img>
       </div>
       <div className="sign">
         <img
           className="sign-img"
           src={virgo}
-          onClick={() => setSelectedSign(signs[5])}
+          onClick={() => {
+            navigate(`/virgo-horoscope`)
+          }}
         ></img>
       </div>
       <div className="sign">
         <img
           className="sign-img"
           src={libra}
-          onClick={() => setSelectedSign(signs[6])}
+          onClick={() => {
+            navigate(`/libra-horoscope`)
+          }}
         ></img>
       </div>
       <div className="sign">
         <img
           className="sign-img"
           src={scorpio}
-          onClick={() => setSelectedSign(signs[7])}
+          onClick={() => {
+            navigate(`/scorpio-horoscope`)
+          }}
         ></img>
       </div>
       <div className="sign">
         <img
           className="sign-img"
           src={sag}
-          onClick={() => setSelectedSign(signs[8])}
+          onClick={() => {
+            navigate(`/sag-horoscope`)
+          }}
         ></img>
       </div>
       <div className="sign">
         <img
           className="sign-img"
           src={capricorn}
-          onClick={() => setSelectedSign(signs[9])}
+          onClick={() => {
+            navigate(`/capricorn-horoscope`)
+          }}
         ></img>
       </div>
       <div className="sign">
         <img
           className="sign-img"
           src={aquarius}
-          onClick={() => setSelectedSign(signs[10])}
+          onClick={() => {
+            navigate(`/aquarius-horoscope`)
+          }}
         ></img>
       </div>
       <div className="sign">
         <img
           className="sign-img"
           src={pisces}
-          onClick={() => setSelectedSign(signs[11])}
+          onClick={() => {
+            navigate(`/pisces-horoscope`)
+          }}
         ></img>
       </div>
     </div>

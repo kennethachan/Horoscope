@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import time from "../assets/time.webp"
 
-function AriesHoroscope(props) {
+function CapricornHoroscope(props) {
   let navigate = useNavigate()
   const [yesterday, setYesterday] = useState([])
   const [today, setToday] = useState([])
@@ -18,21 +18,21 @@ function AriesHoroscope(props) {
 
   const getYesterday = async () => {
     const res = await axios.get(
-      `http://sandipbgt.com/theastrologer/api/horoscope/aries/yesterday`
+      `http://sandipbgt.com/theastrologer/api/horoscope/capricorn/yesterday`
     )
     setYesterday(res.data)
   }
 
   const getToday = async () => {
     const res = await axios.get(
-      `http://sandipbgt.com/theastrologer/api/horoscope/aries/today`
+      `http://sandipbgt.com/theastrologer/api/horoscope/capricorn/today`
     )
     setToday(res.data)
   }
 
   const getTomorrow = async () => {
     const res = await axios.get(
-      `http://sandipbgt.com/theastrologer/api/horoscope/aries/tomorrow`
+      `http://sandipbgt.com/theastrologer/api/horoscope/capricorn/tomorrow`
     )
     setTomorrow(res.data)
   }
@@ -67,4 +67,4 @@ function AriesHoroscope(props) {
   )
 }
 
-export default AriesHoroscope
+export default CapricornHoroscope

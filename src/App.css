@@ -33,6 +33,15 @@
   width: 600px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 50px;
+}
+
+.back {
+  cursor: pointer;
+}
+
+.back:hover {
+text-decoration: underline;
 }
 
 

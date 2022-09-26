@@ -38,8 +38,8 @@ function AriesHoroscope(props) {
   }
 
   return (
-    <div>
-      <h2> What Are The Stars Saying ?</h2>
+    <div className="horoscope-container">
+      <h2 className="title"> What Are The Stars Saying ?</h2>
       <p
         className="back"
         onClick={() => {

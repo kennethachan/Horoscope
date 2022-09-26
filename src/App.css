@@ -61,3 +61,42 @@ footer {
   margin-top: 100px;
   font-size: 10px;
 }
+
+@media only screen and (max-width:414px) {
+  .App {
+    width: 414px;
+  }
+
+  .sign-btns {
+    width: 414px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+
+  .sign-img {
+    width: 225px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+
+.sign-title {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+  .hr {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .horoscope {
+    width: 350px;
+  }
+
+}

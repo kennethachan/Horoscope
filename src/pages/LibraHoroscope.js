@@ -2,7 +2,7 @@ import React from "react"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
-import time from "../assets/time.webp"
+import libra from "../assets/libra.png"
 
 function LibraHoroscope(props) {
   let navigate = useNavigate()
@@ -48,7 +48,7 @@ function LibraHoroscope(props) {
       >
         Back to Sun Signs
       </p>
-      <img src={time}></img>
+      <img className="sign-details" src={libra}></img>
 
       <h1 className="sign-title">Libra</h1>
       <hr className="hr"></hr>

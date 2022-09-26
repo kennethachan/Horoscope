@@ -2,7 +2,7 @@ import React from "react"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
-import time from "../assets/time.webp"
+import taurus from "../assets/taurus.png"
 
 function TaurusHoroscope(props) {
   let navigate = useNavigate()
@@ -48,7 +48,7 @@ function TaurusHoroscope(props) {
       >
         Back to Sun Signs
       </p>
-      <img src={time}></img>
+      <img className="sign-details" src={taurus}></img>
 
       <h1 className="sign-title">Taurus</h1>
       <hr className="hr"></hr>

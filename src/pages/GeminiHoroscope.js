@@ -2,7 +2,7 @@ import React from "react"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
-import time from "../assets/time.webp"
+import gemini from "../assets/gemini.png"
 
 function GeminiHoroscope(props) {
   let navigate = useNavigate()
@@ -49,7 +49,7 @@ function GeminiHoroscope(props) {
         Back to Sun Signs
       </p>
 
-      <img src={time}></img>
+      <img className="sign-details" src={gemini}></img>
 
       <h1 className="sign-title">Gemini</h1>
       <hr className="hr"></hr>

@@ -6,7 +6,7 @@ import SunSigns from "../src/components/SunSigns"
 function App() {
   return (
     <div className="App">
-      <h2> What Are the Stars Saying ?</h2>
+      <h2> What Are The Stars Saying ?</h2>
       <SunSigns></SunSigns>
       <footer>Images by rawpixel.com</footer>
     </div>

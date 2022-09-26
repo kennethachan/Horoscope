@@ -22,11 +22,17 @@
 }
 
 .sign:hover {
-  opacity: .5;
+  opacity: .4;
 }
 
 .sign-img {
   height: 300px;
+}
+
+.horoscope {
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 

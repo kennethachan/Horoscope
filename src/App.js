@@ -1,14 +1,15 @@
-import { useEffect, useState } from "react"
-import axios from "axios"
 import "./App.css"
-import SunSigns from "../src/components/SunSigns"
+import { Route, Routes } from "react-router"
+import Home from "../src/pages/Home"
+import AriesHoroscope from "./pages/AriesHoroscope"
 
 function App() {
   return (
     <div className="App">
-      <h2> What Are The Stars Saying ?</h2>
-      <SunSigns></SunSigns>
-      <footer>Images by rawpixel.com</footer>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aries-horoscope" element={<AriesHoroscope />} />
+      </Routes>
     </div>
   )
 }

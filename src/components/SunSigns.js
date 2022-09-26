@@ -1,5 +1,6 @@
 import React from "react"
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import aries from "../assets/aries.jpg"
 import taurus from "../assets/taurus.png"
@@ -15,6 +16,7 @@ import aquarius from "../assets/aquarius.png"
 import pisces from "../assets/pisces.png"
 
 function SunSigns(props) {
+  let navigate = useNavigate()
   const [signs, setSigns] = useState([])
   const [selectedSign, setSelectedSign] = useState(null)
 
@@ -35,7 +37,9 @@ function SunSigns(props) {
         <img
           className="sign-img"
           src={aries}
-          onClick={() => setSelectedSign(signs[0])}
+          onClick={() => {
+            navigate(`/aries-horoscope`)
+          }}
         ></img>
       </div>
 

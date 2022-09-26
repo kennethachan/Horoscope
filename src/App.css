@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+
+.sign-btns {
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-top:100px;
+}
+
+.sign {
+  width: 100px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  margin-top: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.sign:hover {
+  background-color: green;
+  color: white;
+}

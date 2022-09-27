@@ -82,13 +82,14 @@ footer {
 
   .sign-btns {
     width: 414px;
-    display: block;
+    display: grid;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0px;
   } 
 
   .sign-img {
-    width: 225px;
+    width: 100px;
     height: auto;
     margin-left: auto;
     margin-right: auto;

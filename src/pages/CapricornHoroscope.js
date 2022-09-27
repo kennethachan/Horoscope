@@ -21,7 +21,7 @@ function CapricornHoroscope(props) {
 
   return (
     <div>
-      <h2> What Are The Stars Saying ?</h2>
+      <h2>Daily Astrologie</h2>
       <p
         className="back"
         onClick={() => {

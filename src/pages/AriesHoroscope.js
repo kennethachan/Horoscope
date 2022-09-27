@@ -21,7 +21,7 @@ function AriesHoroscope(props) {
 
   return (
     <div className="horoscope-container">
-      <h2 className="title"> What Are The Stars Saying ?</h2>
+      <h2 className="title">Daily Astrologie</h2>
       <p
         className="back"
         onClick={() => {

@@ -33,6 +33,7 @@
 .sign-details {
   height: 400px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  margin-top: 25px;
 }
 
 .hr {
@@ -46,6 +47,18 @@ margin-bottom: 50px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 50px;
+}
+
+.horoscope-details {
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .back {
@@ -80,6 +93,12 @@ footer {
     margin-left: auto;
     margin-right: auto;
   } 
+
+  .horoscope-details {
+    width: 350px;
+    display: block;
+    text-align: center;
+  }
 
 .sign-title {
   width: 350px;

@@ -6,35 +6,17 @@ import leo from "../assets/leo.png"
 
 function LeoHoroscope(props) {
   let navigate = useNavigate()
-  const [yesterday, setYesterday] = useState([])
   const [today, setToday] = useState([])
-  const [tomorrow, setTomorrow] = useState([])
 
   useEffect(() => {
-    getYesterday()
     getToday()
-    getTomorrow()
   })
 
-  const getYesterday = async () => {
-    const res = await axios.get(
-      `http://sandipbgt.com/theastrologer/api/horoscope/leo/yesterday`
-    )
-    setYesterday(res.data)
-  }
-
   const getToday = async () => {
-    const res = await axios.get(
-      `http://sandipbgt.com/theastrologer/api/horoscope/leo/today`
+    const res = await axios.post(
+      `https://aztro.sameerkumar.website/?sign=leo&day=today`
     )
     setToday(res.data)
-  }
-
-  const getTomorrow = async () => {
-    const res = await axios.get(
-      `http://sandipbgt.com/theastrologer/api/horoscope/leo/tomorrow`
-    )
-    setTomorrow(res.data)
   }
 
   return (
@@ -46,26 +28,32 @@ function LeoHoroscope(props) {
           navigate("/")
         }}
       >
-        Back to Sun Signs
+        Home
       </p>
       <img className="sign-details" src={leo}></img>
 
       <h1 className="sign-title">Leo</h1>
+      <p>{today.date_range}</p>
       <hr className="hr"></hr>
 
       <div className="horoscope">
-        <h3>Yesterday</h3>
-        <p>{yesterday.horoscope}</p>
-      </div>
-
-      <div className="horoscope">
-        <h3>Today</h3>
-        <p>{today.horoscope}</p>
-      </div>
-
-      <div className="horoscope">
-        <h3>Tomorrow</h3>
-        <p>{tomorrow.horoscope}</p>
+        <h3>{today.current_date}</h3>
+        <p>{today.description}</p>
+        <div className="horoscope-details">
+          <p>
+            <span className="bold">Mood:</span>
+            <br></br>
+            {today.mood}
+          </p>
+          <p>
+            <span className="bold">Lucky Number:</span> <br></br>{" "}
+            {today.lucky_number}
+          </p>
+          <p>
+            <span className="bold">Lucky Time:</span> <br></br>{" "}
+            {today.lucky_time}
+          </p>
+        </div>
       </div>
     </div>
   )

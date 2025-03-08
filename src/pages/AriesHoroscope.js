@@ -22,7 +22,6 @@ function AriesHoroscope(props) {
       return;
     }
 
-    try {
       const response = await axios.post(
         "https://api.openai.com/v1/chat/completions",
         {
@@ -56,26 +55,11 @@ function AriesHoroscope(props) {
 
       const jsonString = response.data.choices[0]?.message?.content.trim();
       console.log(jsonString)
-      try {
+      
         const parsedData = JSON.parse(jsonString);
         
-        // ✅ Transform into an array of objects as requested
-        const formattedData = [
-          { forecast: parsedData.forecast },
-          { affirmation: parsedData.affirmation }
-        ];
-
-        setHoroscopeData(formattedData);
-      } catch (e) {
-        console.error("JSON Parse Error:", e);
-        setError("Invalid response format from API");
-      }
-    } catch (err) {
-      console.error("API Request Error:", err);
-      setError("Failed to fetch horoscope data");
-      setHoroscopeData(null);
-    }
-  };
+    }       
+  
          
   return (
     <div className="horoscope-container">

@@ -20,16 +20,6 @@ function SunSigns(props) {
   const [signs, setSigns] = useState([])
   const [selectedSign, setSelectedSign] = useState(null)
 
-  useEffect(() => {
-    getSigns()
-  })
-
-  const getSigns = async () => {
-    const res = await axios.get(
-      `http://sandipbgt.com/theastrologer/api/sunsigns/`
-    )
-    setSigns(res.data)
-  }
 
   return (
     <div className="sign-btns">

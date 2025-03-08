@@ -1,5 +1,6 @@
 import "./App.css"
-import { Route, Routes } from "react-router"
+import React from 'react';
+import { Route, Routes } from "react-router-dom"
 import Home from "../src/pages/Home"
 import AriesHoroscope from "./pages/AriesHoroscope"
 import TaurusHoroscope from "./pages/TaurusHoroscope"

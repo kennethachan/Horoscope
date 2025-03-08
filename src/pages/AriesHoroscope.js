@@ -6,6 +6,8 @@ import aries from "../assets/aries.jpg"
 
 function AriesHoroscope(props) {
   let navigate = useNavigate()
+  const apiKey = 'YOUR_OPENAI_API_KEY';
+  // const prompt = `Generate a horoscope for the zodiac sign ${sign} for today.`;
   const [today, setToday] = useState([])
 
   useEffect(() => {
@@ -13,10 +15,7 @@ function AriesHoroscope(props) {
   })
 
   const getToday = async () => {
-    const res = await axios.post(
-      `https://aztro.sameerkumar.website/?sign=aries&day=today`
-    )
-    setToday(res.data)
+console.log(process.env.REACT_APP_API_KEY)
   }
 
   return (

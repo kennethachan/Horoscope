@@ -5,22 +5,81 @@ import axios from "axios"
 import aries from "../assets/aries.jpg"
 
 function AriesHoroscope(props) {
-  let navigate = useNavigate()
-  const apiKey = 'YOUR_OPENAI_API_KEY';
-  // const prompt = `Generate a horoscope for the zodiac sign ${sign} for today.`;
-  const [today, setToday] = useState([])
+  const sign = "Aries"
+  const [horoscopeData, setHoroscopeData] = useState(null);
+  const [error, setError] = useState(null);
+
+  const openaiApiKey = process.env.REACT_APP_API_KEY;
 
   useEffect(() => {
-    getToday()
-  })
+    getHoroscope();
+  }, []);
 
-  const getToday = async () => {
-console.log(process.env.REACT_APP_API_KEY)
-  }
+  const getHoroscope = async () => {
+    if (!openaiApiKey) {
+      console.error("Missing API key");
+      setError("API key is missing");
+      return;
+    }
 
+    try {
+      const response = await axios.post(
+        "https://api.openai.com/v1/chat/completions",
+        {
+          model: "gpt-3.5-turbo",
+          messages: [
+            { role: "system", content: "You are an astrology expert." },
+            {
+              role: "user",
+              content: `Generate a daily horoscope for '${sign}' in JSON format:
+              {
+                "forecast": "Daily horoscope forecast here...",
+                "affirmation": "Daily affirmation here...",
+                "lucky_time": "Lucky time here...",
+                "lucky_color": "Lucky color here...",
+                "personality_traits": ["Trait1", "Trait2", "Trait3"],
+                "mythology": "Mythology history here..."
+              }`
+            }
+          ],
+          max_tokens: 300,
+          temperature: 0.7,
+        },
+        {
+          headers: {
+            "Authorization": `Bearer ${openaiApiKey}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+
+      const jsonString = response.data.choices[0]?.message?.content.trim();
+      console.log(jsonString)
+      try {
+        const parsedData = JSON.parse(jsonString);
+        
+        // ✅ Transform into an array of objects as requested
+        const formattedData = [
+          { forecast: parsedData.forecast },
+          { affirmation: parsedData.affirmation }
+        ];
+
+        setHoroscopeData(formattedData);
+      } catch (e) {
+        console.error("JSON Parse Error:", e);
+        setError("Invalid response format from API");
+      }
+    } catch (err) {
+      console.error("API Request Error:", err);
+      setError("Failed to fetch horoscope data");
+      setHoroscopeData(null);
+    }
+  };
+         
   return (
     <div className="horoscope-container">
-      <h2 className="title">Daily Astrologie</h2>
+      {/* <h2 className="title">Daily Astrologie</h2>
       <p
         className="back"
         onClick={() => {
@@ -54,7 +113,7 @@ console.log(process.env.REACT_APP_API_KEY)
             {today.lucky_time}
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

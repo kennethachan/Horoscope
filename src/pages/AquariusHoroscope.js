@@ -60,15 +60,10 @@ function AquariusHoroscope(props) {
   
   return (
     <div className="horoscope-container">
-      <h2 className="title">Daily Astrologie</h2>
-      <p
-        className="back"
-        onClick={() => {
+   <h2 className="title back" onClick={() => {
           navigate("/")
-        }}
-      >
-        Home
-      </p>
+        }}>Daily Astrologie</h2>
+    
       <img className="sign-details" src={aquarius}></img>
 
       <h1 className="sign-title">Aquarius</h1>

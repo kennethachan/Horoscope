@@ -1,7 +1,6 @@
 import React from "react"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import axios from "axios"
 import aries from "../assets/aries.jpg"
 import taurus from "../assets/taurus.png"
 import gemini from "../assets/gemini.png"

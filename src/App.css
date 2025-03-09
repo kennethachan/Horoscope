@@ -75,6 +75,29 @@ footer {
   font-size: 10px;
 }
 
+
+
+.horoscope-table {
+  width: 600px;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.horoscope-table th, .horoscope-table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #FAF9F6;
+}
+
+.horoscope-table th {
+  background-color: #FAF9F6;
+  font-weight: bold;
+}
+
+
+
 @media only screen and (max-width:414px) {
   .App {
     width: 414px;

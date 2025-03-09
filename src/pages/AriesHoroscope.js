@@ -5,23 +5,23 @@ import axios from "axios"
 import aries from "../assets/aries.jpg"
 
 function AriesHoroscope(props) {
+  let navigate = useNavigate()
   const sign = "Aries"
   const [horoscopeData, setHoroscopeData] = useState(null);
-  const [error, setError] = useState(null);
 
   const openaiApiKey = process.env.REACT_APP_API_KEY;
+
+  const currentDate = new Date().toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   useEffect(() => {
     getHoroscope();
   }, []);
 
   const getHoroscope = async () => {
-    if (!openaiApiKey) {
-      console.error("Missing API key");
-      setError("API key is missing");
-      return;
-    }
-
       const response = await axios.post(
         "https://api.openai.com/v1/chat/completions",
         {
@@ -52,18 +52,16 @@ function AriesHoroscope(props) {
         }
       );
 
-
       const jsonString = response.data.choices[0]?.message?.content.trim();
-      console.log(jsonString)
       
         const parsedData = JSON.parse(jsonString);
-        
+        setHoroscopeData(parsedData)
     }       
   
          
   return (
     <div className="horoscope-container">
-      {/* <h2 className="title">Daily Astrologie</h2>
+      <h2 className="title">Daily Astrologie</h2>
       <p
         className="back"
         onClick={() => {
@@ -75,30 +73,48 @@ function AriesHoroscope(props) {
       <img className="sign-details" src={aries}></img>
 
       <h1 className="sign-title">Aries</h1>
-      <p>{today.date_range}</p>
+      <p>March 21 - April 19</p>
       <hr className="hr"></hr>
 
-      <div className="horoscope">
-        <h3>{today.current_date}</h3>
-        <p>{today.description}</p>
-
-        <div className="horoscope-details">
-          <p>
-            <span className="bold">Mood:</span>
-            <br></br>
-            {today.mood}
-          </p>
-          <p>
-            <span className="bold">Lucky Number:</span> <br></br>{" "}
-            {today.lucky_number}
-          </p>
-          <p>
-            <span className="bold">Lucky Time:</span> <br></br>{" "}
-            {today.lucky_time}
-          </p>
+      <h3>{currentDate}</h3>
+      {horoscopeData && (
+        <div className="horoscope-content">
+          <table className="horoscope-table">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Forecast</strong></td>
+                <td>{horoscopeData.forecast}</td>
+              </tr>
+              <tr>
+                <td><strong>Affirmation</strong></td>
+                <td>{horoscopeData.affirmation}</td>
+              </tr>
+              <tr>
+                <td><strong>Personality Traits</strong></td>
+                <td>{horoscopeData.personality_traits.join(", ")}</td>
+              </tr>
+              <tr>
+                <td><strong>Lucky Color</strong></td>
+                <td>{horoscopeData.lucky_color}</td>
+              </tr>
+              <tr>
+                <td><strong>Lucky Time</strong></td>
+                <td>{horoscopeData.lucky_time}</td>
+              </tr>
+              <tr>
+                <td><strong>Mythology</strong></td>
+                <td>{horoscopeData.mythology}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div> */}
+      )}
     </div>
+    
   )
 }
 

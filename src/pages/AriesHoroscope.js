@@ -58,7 +58,6 @@ function AriesHoroscope(props) {
         setHoroscopeData(parsedData)
     }       
   
-         
   return (
     <div className="horoscope-container">
       <h2 className="title">Daily Astrologie</h2>
@@ -75,44 +74,6 @@ function AriesHoroscope(props) {
       <h1 className="sign-title">Aries</h1>
       <p>March 21 - April 19</p>
       <hr className="hr"></hr>
-
-      {/* {horoscopeData && (
-        <div className="horoscope-content">
-          <table className="horoscope-table">
-            <thead>
-              <tr>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Forecast</strong></td>
-                <td>{horoscopeData.forecast}</td>
-              </tr>
-              <tr>
-                <td><strong>Affirmation</strong></td>
-                <td>{horoscopeData.affirmation}</td>
-              </tr>
-              <tr>
-                <td><strong>Personality Traits</strong></td>
-                <td>{horoscopeData.personality_traits.join(", ")}</td>
-              </tr>
-              <tr>
-                <td><strong>Lucky Color</strong></td>
-                <td>{horoscopeData.lucky_color}</td>
-              </tr>
-              <tr>
-                <td><strong>Lucky Time</strong></td>
-                <td>{horoscopeData.lucky_time}</td>
-              </tr>
-              <tr>
-                <td><strong>Mythology</strong></td>
-                <td>{horoscopeData.mythology}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      )} */}
-
 
       {horoscopeData && (
       <div className="horoscope">

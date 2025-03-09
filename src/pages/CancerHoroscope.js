@@ -1,5 +1,5 @@
 import React from "react"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import cancer from "../assets/cancer.png"
@@ -16,21 +16,18 @@ function CancerHoroscope(props) {
     day: "numeric",
   });
 
-  useEffect(() => {
-    getHoroscope();
-  }, []);
-
-  const getHoroscope = async () => {
-
-      const response = await axios.post(
-        "https://api.openai.com/v1/chat/completions",
-        {
-          model: "gpt-3.5-turbo",
-          messages: [
-            { role: "system", content: "You are an astrology expert." },
-            {
-              role: "user",
-              content: `Generate a daily horoscope for '${sign}' in JSON format:
+  // Memoize the getHoroscope function using useCallback
+ const getHoroscope = useCallback(async () => {
+  try {
+    const response = await axios.post(
+      "https://api.openai.com/v1/chat/completions",
+      {
+        model: "gpt-3.5-turbo",
+        messages: [
+          { role: "system", content: "You are an astrology expert." },
+          {
+            role: "user",
+            content: `Generate a daily horoscope for '${sign}' in JSON format:
               {
                 "forecast": "Daily horoscope forecast here...",
                 "affirmation": "Daily affirmation here...",
@@ -39,24 +36,31 @@ function CancerHoroscope(props) {
                 "personality_traits": ["Trait1", "Trait2", "Trait3"],
                 "mythology": "Mythology history here..."
               }`
-            }
-          ],
-          max_tokens: 300,
-          temperature: 0.7,
+          }
+        ],
+        max_tokens: 300,
+        temperature: 0.7,
+      },
+      {
+        headers: {
+          "Authorization": `Bearer ${openaiApiKey}`,
+          "Content-Type": "application/json",
         },
-        {
-          headers: {
-            "Authorization": `Bearer ${openaiApiKey}`,
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      }
+    );
 
-      const jsonString = response.data.choices[0]?.message?.content.trim();
-      
-        const parsedData = JSON.parse(jsonString);
-        setHoroscopeData(parsedData)
-    }       
+    const jsonString = response.data.choices[0]?.message?.content.trim();
+    const parsedData = JSON.parse(jsonString);
+    setHoroscopeData(parsedData);
+  } catch (error) {
+    console.error("Error fetching horoscope:", error);
+  }
+}, [sign, openaiApiKey]); // Only re-create getHoroscope if `sign` or `openaiApiKey` changes
+
+// useEffect hook to fetch horoscope data
+useEffect(() => {
+  getHoroscope();
+}, [getHoroscope]); // Run getHoroscope when it's available (memoized)  
   
   return (
     <div className="horoscope-container">
@@ -64,7 +68,7 @@ function CancerHoroscope(props) {
           navigate("/")
         }}>Daily Astrologie</h2>
     
-      <img className="sign-details" src={cancer}></img>
+      <img alt="cancer" className="sign-details" src={cancer}></img>
 
       <h1 className="sign-title">Cancer</h1>
       <p>June 21 – July 22</p>

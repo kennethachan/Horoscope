@@ -1,5 +1,4 @@
 import React from "react"
-import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import aries from "../assets/aries.jpg"
 import taurus from "../assets/taurus.png"
@@ -21,7 +20,7 @@ function SunSigns(props) {
   return (
     <div className="sign-btns">
       <div className="sign">
-        <img
+        <img alt="aries"
           className="sign-img"
           src={aries}
           onClick={() => {
@@ -31,7 +30,7 @@ function SunSigns(props) {
       </div>
 
       <div className="sign">
-        <img
+        <img alt="taurus"
           className="sign-img"
           src={taurus}
           onClick={() => {
@@ -40,7 +39,7 @@ function SunSigns(props) {
         ></img>
       </div>
       <div className="sign">
-        <img
+        <img alt="gemini"
           className="sign-img"
           src={gemini}
           onClick={() => {
@@ -49,7 +48,7 @@ function SunSigns(props) {
         ></img>
       </div>
       <div className="sign">
-        <img
+        <img alt="cancer"
           className="sign-img"
           src={cancer}
           onClick={() => {
@@ -58,7 +57,7 @@ function SunSigns(props) {
         ></img>
       </div>
       <div className="sign">
-        <img
+        <img alt="leo"
           className="sign-img"
           src={leo}
           onClick={() => {
@@ -67,7 +66,7 @@ function SunSigns(props) {
         ></img>
       </div>
       <div className="sign">
-        <img
+        <img alt="virgo"
           className="sign-img"
           src={virgo}
           onClick={() => {
@@ -76,7 +75,7 @@ function SunSigns(props) {
         ></img>
       </div>
       <div className="sign">
-        <img
+        <img alt="libra"
           className="sign-img"
           src={libra}
           onClick={() => {
@@ -85,7 +84,7 @@ function SunSigns(props) {
         ></img>
       </div>
       <div className="sign">
-        <img
+        <img alt="scorpio"
           className="sign-img"
           src={scorpio}
           onClick={() => {
@@ -94,7 +93,7 @@ function SunSigns(props) {
         ></img>
       </div>
       <div className="sign">
-        <img
+        <img alt="saggittarius"
           className="sign-img"
           src={sag}
           onClick={() => {
@@ -103,7 +102,7 @@ function SunSigns(props) {
         ></img>
       </div>
       <div className="sign">
-        <img
+        <img alt="capricorn"
           className="sign-img"
           src={capricorn}
           onClick={() => {
@@ -112,7 +111,7 @@ function SunSigns(props) {
         ></img>
       </div>
       <div className="sign">
-        <img
+        <img alt="aquarius"
           className="sign-img"
           src={aquarius}
           onClick={() => {
@@ -121,7 +120,7 @@ function SunSigns(props) {
         ></img>
       </div>
       <div className="sign">
-        <img
+        <img alt="pisces"
           className="sign-img"
           src={pisces}
           onClick={() => {

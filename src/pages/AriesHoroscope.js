@@ -8,7 +8,6 @@ function AriesHoroscope(props) {
   let navigate = useNavigate()
   const sign = "Aries"
   const [horoscopeData, setHoroscopeData] = useState(null);
-
   const openaiApiKey = process.env.REACT_APP_API_KEY;
 
   const currentDate = new Date().toLocaleDateString("en-US", {
@@ -22,6 +21,7 @@ function AriesHoroscope(props) {
   }, []);
 
   const getHoroscope = async () => {
+
       const response = await axios.post(
         "https://api.openai.com/v1/chat/completions",
         {
@@ -76,8 +76,7 @@ function AriesHoroscope(props) {
       <p>March 21 - April 19</p>
       <hr className="hr"></hr>
 
-      <h3>{currentDate}</h3>
-      {horoscopeData && (
+      {/* {horoscopeData && (
         <div className="horoscope-content">
           <table className="horoscope-table">
             <thead>
@@ -112,7 +111,21 @@ function AriesHoroscope(props) {
             </tbody>
           </table>
         </div>
+      )} */}
+
+
+      {horoscopeData && (
+      <div className="horoscope">
+        <h3>{currentDate}</h3>
+        <p className="attribute"><span className="bold">Forecast: </span>{horoscopeData.forecast}</p>
+        <p className="attribute"><span className="bold">Affirmation: </span>{horoscopeData.affirmation}</p>
+        <p className="attribute"> <span className="bold">Traits: </span>{horoscopeData.personality_traits.join(", ")}</p>
+        <p className="attribute"><span className="bold">Lucky Color: </span> {" "}{horoscopeData.lucky_color}</p>
+        <p className="attribute"><span className="bold">Lucky Time: </span> {" "}{horoscopeData.lucky_time}</p>
+        <p className="attribute"><span className="bold">Mythology: </span> {" "}{horoscopeData.mythology}</p>
+      </div>
       )}
+
     </div>
     
   )

@@ -17,8 +17,6 @@ import pisces from "../assets/pisces.png"
 
 function SunSigns(props) {
   let navigate = useNavigate()
-  const [signs, setSigns] = useState([])
-  const [selectedSign, setSelectedSign] = useState(null)
 
 
   return (

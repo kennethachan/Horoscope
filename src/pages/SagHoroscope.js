@@ -28,18 +28,18 @@ function SagHoroscope(props) {
           {
             role: "user",
             content: `Generate a daily horoscope for '${sign}' in JSON format:
-              {
-                "forecast": "Daily horoscope forecast here...",
-                "affirmation": "Daily affirmation here...",
-                "lucky_time": "Lucky time here...",
-                "lucky_color": "Lucky color here...",
+             {
+               "forecast": "Horoscope forecast for the day here...",
+                "affirmation": "Affirmation of the day here...",
+                "lucky_time": "Random lucky time of the day here...",
+                "lucky_color": "Lucky color of the day here...",
                 "personality_traits": ["Trait1", "Trait2", "Trait3"],
                 "mythology": "Mythology history here..."
               }`
           }
         ],
         max_tokens: 300,
-        temperature: 0.7,
+        temperature: 1.0,
       },
       {
         headers: {

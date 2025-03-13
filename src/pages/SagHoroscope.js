@@ -113,7 +113,7 @@ function SagHoroscope(props) {
           <div className="fade-in">
             <img alt="aries" className="sign-details" src={sag}></img>
             <h1 className="sign-title">Sagittarius</h1>
-            <p>March 21 - April 19</p>
+            <p>November 22 - December 21</p>
             <hr className="hr"></hr>
 
             <div className="horoscope">

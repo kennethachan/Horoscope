@@ -113,7 +113,7 @@ function VirgoHoroscope(props) {
           <div className="fade-in">
             <img alt="aries" className="sign-details" src={virgo}></img>
             <h1 className="sign-title">Virgo</h1>
-            <p>March 21 - April 19</p>
+            <p>August 23 - September 22</p>
             <hr className="hr"></hr>
 
             <div className="horoscope">

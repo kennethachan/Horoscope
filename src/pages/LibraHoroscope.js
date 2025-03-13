@@ -113,7 +113,7 @@ function LibraHoroscope(props) {
           <div className="fade-in">
             <img alt="aries" className="sign-details" src={libra}></img>
             <h1 className="sign-title">Libra</h1>
-            <p>March 21 - April 19</p>
+            <p>September 23 - October 22</p>
             <hr className="hr"></hr>
 
             <div className="horoscope">

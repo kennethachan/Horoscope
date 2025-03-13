@@ -113,7 +113,7 @@ function TaurusHoroscope(props) {
           <div className="fade-in">
             <img alt="aries" className="sign-details" src={taurus}></img>
             <h1 className="sign-title">Taurus</h1>
-            <p>March 21 - April 19</p>
+            <p>April 20 - May 20</p>
             <hr className="hr"></hr>
 
             <div className="horoscope">

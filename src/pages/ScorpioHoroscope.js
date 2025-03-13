@@ -113,7 +113,7 @@ function ScorpioHoroscope(props) {
           <div className="fade-in">
             <img alt="aries" className="sign-details" src={scorpio}></img>
             <h1 className="sign-title">Scorpio</h1>
-            <p>March 21 - April 19</p>
+            <p>October 23 - November 21</p>
             <hr className="hr"></hr>
 
             <div className="horoscope">

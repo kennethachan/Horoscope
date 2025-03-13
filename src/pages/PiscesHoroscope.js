@@ -113,7 +113,7 @@ function PiscesHoroscope(props) {
           <div className="fade-in">
             <img alt="aries" className="sign-details" src={pisces}></img>
             <h1 className="sign-title">Pisces</h1>
-            <p>March 21 - April 19</p>
+            <p>February 19 - March 20</p>
             <hr className="hr"></hr>
 
             <div className="horoscope">

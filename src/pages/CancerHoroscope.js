@@ -114,7 +114,7 @@ function CancerHoroscope(props) {
           <div className="fade-in">
             <img alt="aries" className="sign-details" src={cancer}></img>
             <h1 className="sign-title">Cancer</h1>
-            <p>March 21 - April 19</p>
+            <p>June 21 - July 22</p>
             <hr className="hr"></hr>
 
             <div className="horoscope">

@@ -113,7 +113,7 @@ function GeminiHoroscope(props) {
           <div className="fade-in">
             <img alt="aries" className="sign-details" src={gemini}></img>
             <h1 className="sign-title">Gemini</h1>
-            <p>March 21 - April 19</p>
+            <p>May 21 - June 20</p>
             <hr className="hr"></hr>
 
             <div className="horoscope">

@@ -113,7 +113,7 @@ function AquariusHoroscope(props) {
           <div className="fade-in">
             <img alt="aries" className="sign-details" src={aquarius}></img>
             <h1 className="sign-title">Aquarius</h1>
-            <p>March 21 - April 19</p>
+            <p>January 20 - February 18</p>
             <hr className="hr"></hr>
 
             <div className="horoscope">

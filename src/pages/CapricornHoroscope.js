@@ -113,7 +113,7 @@ function CapricornHoroscope(props) {
           <div className="fade-in">
             <img alt="aries" className="sign-details" src={capricorn}></img>
             <h1 className="sign-title">Capricorn</h1>
-            <p>March 21 - April 19</p>
+            <p>December 22 - January 19</p>
             <hr className="hr"></hr>
 
             <div className="horoscope">

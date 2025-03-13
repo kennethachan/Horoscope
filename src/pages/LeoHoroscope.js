@@ -113,7 +113,7 @@ function LeoHoroscope(props) {
           <div className="fade-in">
             <img alt="aries" className="sign-details" src={leo}></img>
             <h1 className="sign-title">Leo</h1>
-            <p>March 21 - April 19</p>
+            <p>July 23 - August 22</p>
             <hr className="hr"></hr>
 
             <div className="horoscope">

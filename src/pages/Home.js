@@ -10,7 +10,10 @@ function Home(props) {
       <h2 className="title">Daily Astrologie</h2>
       <p className="whatsign" onClick={() => {
           navigate("/whatsmysign")
-        }}>What's My Sign?</p>
+        }}>Find My Sign</p>
+         {/* <p className="" onClick={() => {
+          navigate("/whatsmysign")
+        }}>Interpret My Dream</p> */}
       <SunSigns></SunSigns>
       <footer>Images by rawpixel.com</footer>
     </div>

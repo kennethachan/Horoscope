@@ -15,6 +15,7 @@ import CapricornHoroscope from "./pages/CapricornHoroscope"
 import AquariusHoroscope from "./pages/AquariusHoroscope"
 import PiscesHoroscope from "./pages/PiscesHoroscope"
 import WhatsMySign from "./pages/WhatsMySign"
+import MyDreams from "./pages/MyDreams"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/whatsmysign" element={<WhatsMySign />} />
+        <Route path="/mydreams" element={<MyDreams />} />
         <Route path="/aries-horoscope" element={<AriesHoroscope />} />
         <Route path="/taurus-horoscope" element={<TaurusHoroscope />} />
         <Route path="/gemini-horoscope" element={<GeminiHoroscope />} />

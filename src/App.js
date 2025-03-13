@@ -14,12 +14,14 @@ import SagHoroscope from "./pages/SagHoroscope"
 import CapricornHoroscope from "./pages/CapricornHoroscope"
 import AquariusHoroscope from "./pages/AquariusHoroscope"
 import PiscesHoroscope from "./pages/PiscesHoroscope"
+import WhatsMySign from "./pages/WhatsMySign"
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/whatsmysign" element={<WhatsMySign />} />
         <Route path="/aries-horoscope" element={<AriesHoroscope />} />
         <Route path="/taurus-horoscope" element={<TaurusHoroscope />} />
         <Route path="/gemini-horoscope" element={<GeminiHoroscope />} />

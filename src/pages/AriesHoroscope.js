@@ -386,7 +386,6 @@ function AriesHoroscope(props) {
 
   return (
     <div className="horoscope-container">
-      {/* Title should always be visible */}
       <h2 className="title back" onClick={() => navigate("/")}>
         Daily Astrologie
       </h2>

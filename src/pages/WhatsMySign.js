@@ -103,7 +103,7 @@ function WhatsMySign() {
                 ))}
             </select>
 
-            <button className="enter-btn" onClick={checkZodiacAndNavigate}>Enter</button>
+            <button className="btn" onClick={checkZodiacAndNavigate}>Enter</button>
             </div>
             </div>
            

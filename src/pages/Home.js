@@ -11,9 +11,9 @@ function Home(props) {
       <p className="whatsign" onClick={() => {
           navigate("/whatsmysign")
         }}>Find My Sign</p>
-         {/* <p className="" onClick={() => {
+         <p className="" onClick={() => {
           navigate("/whatsmysign")
-        }}>Interpret My Dream</p> */}
+        }}>Interpret My Dream</p>
       <SunSigns></SunSigns>
       <footer>Images by rawpixel.com</footer>
     </div>

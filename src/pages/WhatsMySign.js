@@ -81,8 +81,8 @@ function WhatsMySign() {
 
     return (
         <div>
-            <h2 className="title back" onClick={() => navigate("/")}>
-                Daily Astrologie
+            <h2 className="title">
+                <span className="title back" onClick={() => navigate("/")}>Daily Astrologie</span>
             </h2>
             <div className="bday-wrapper">
                  <div className="birthday-container">

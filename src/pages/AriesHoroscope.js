@@ -16,7 +16,6 @@ function AriesHoroscope(props) {
     day: "numeric",
   });
 
-  // Memoized function to fetch horoscope
   const getHoroscope = useCallback(async () => {
     setLoading(true);
     try {

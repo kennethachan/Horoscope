@@ -69,7 +69,8 @@ function DreamInterpreter() {
          <h2 className="title">
                 <span className="title back" onClick={() => navigate("/")}>Daily Astrologie</span>
             </h2>
- <div className="dream-container">
+            <div className="dream-wrapper">
+                 <div className="dream-container">
         {!interpretation && !loading && (
           <>
             <p>Enter your dream below to reveal its hidden meanings.</p>
@@ -104,6 +105,8 @@ function DreamInterpreter() {
           </div>
         )}
       </div>
+            </div>
+
     </div>
      
     );

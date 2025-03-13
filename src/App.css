@@ -51,7 +51,7 @@
 }
 
 .sign-details {
-  height: 400px;
+  height: 250px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   margin-top: 25px;
 }
@@ -133,11 +133,11 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 50vh; /* Ensures it always takes up the full viewport height */
+  min-height: 50vh;
 }
 
 .enter-birthday {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .birthday-container {
@@ -170,7 +170,7 @@ select:hover {
 }
 
 .enter-btn {
-  width: 100%;
+  width: 40%;
   padding: 12px;
   background: black;
   border: none;
@@ -184,11 +184,6 @@ select:hover {
 
 .enter-btn:hover {
   transform: scale(1.02);
-}
-
-.enter-btn:active {
-  transform: scale(0.98);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -234,13 +229,13 @@ select:hover {
 
 
 /* Mobile*/
-@media only screen and (max-width:100vw) {
+@media only screen and (max-width:768px) {
   .App {
-    width: 100vw;
+    width: 100%;
   }
 
   .sign-btns {
-    width: 100vw;
+    width: 100%;
     display: grid;
     margin-left: auto;
     margin-right: auto;

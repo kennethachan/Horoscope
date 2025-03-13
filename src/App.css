@@ -129,15 +129,11 @@ footer {
   margin-right: auto;
 }
 .bday-wrapper {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 60vh; /* Ensures it always takes up the full viewport height */
+  min-height: 50vh; /* Ensures it always takes up the full viewport height */
 }
 
 .enter-birthday {
@@ -238,7 +234,7 @@ select:hover {
 
 
 /* Mobile*/
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:100vh) {
   .App {
     width: 414px;
   }

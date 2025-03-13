@@ -82,7 +82,7 @@ function DreamInterpreter() {
             ></textarea>
   
             <button className="btn" onClick={analyzeDream}>
-              Interpret Dream
+              Interpret
             </button>
           </>
         )}

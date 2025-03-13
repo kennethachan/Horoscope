@@ -1,9 +1,29 @@
 .App {
   text-align: center;
   font-family: 'Playfair Display', serif;
-
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.title {
+  width: 480px;
+  font-weight: bold;
+  font-size: 55px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.whatsign {
+  font-size: 20px;
+  cursor: pointer;
+  width: 150px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.whatsign:hover {
+  transform: scale(1.1);
+}
 
 .sign-btns {
   width: 800px;
@@ -23,6 +43,7 @@
 
 .sign:hover {
   opacity: .4;
+  transform: scale(1.1);
 }
 
 .sign-img {
@@ -67,7 +88,7 @@ margin-bottom: 50px;
 }
 
 .back:hover {
-text-decoration: underline;
+  transform: scale(1.02);
 }
 
 
@@ -100,6 +121,68 @@ footer {
 .attribute {
   text-align: left;
 }
+
+.bday-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.enter-birthday {
+  font-size: 20px;
+}
+
+.birthday-container {
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Playfair Display', serif;
+}
+
+select:hover {
+  border-color: black
+}
+
+.enter-btn {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+}
+
+.enter-btn:hover {
+  transform: scale(1.02);
+}
+
+.enter-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 
 
 

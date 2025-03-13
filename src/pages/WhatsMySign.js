@@ -81,11 +81,12 @@ function WhatsMySign() {
 
     return (
         <div>
-            <h2 className="title" onClick={() => navigate("/")}>
+            <h2 className="title back" onClick={() => navigate("/")}>
                 Daily Astrologie
             </h2>
-            <p>Enter your birthday</p>
-
+            <div className="bday-wrapper">
+                 <div className="birthday-container">
+            <p className="enter-birthday">Enter your birthday</p>
             {/* Month Dropdown First */}
             <select id="month" value={selectedMonth} onChange={(e) => setSelectedMonth(e.target.value)}>
                 <option value="">Month</option>
@@ -102,9 +103,11 @@ function WhatsMySign() {
                 ))}
             </select>
 
-            <button onClick={checkZodiacAndNavigate}>Enter</button>
-
-            <footer>Images by rawpixel.com</footer>
+            <button className="enter-btn" onClick={checkZodiacAndNavigate}>Enter</button>
+            </div>
+            </div>
+           
+        
         </div>
     );
 }

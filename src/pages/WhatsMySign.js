@@ -80,7 +80,7 @@ function WhatsMySign() {
     };
 
     return (
-        <div>
+        <div className="whats-my-sign-container">
             <h2 className="title">
                 <span className="title back" onClick={() => navigate("/")}>Daily Astrologie</span>
             </h2>

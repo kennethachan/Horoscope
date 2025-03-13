@@ -234,13 +234,13 @@ select:hover {
 
 
 /* Mobile*/
-@media only screen and (max-width:100vh) {
+@media only screen and (max-width:100vw) {
   .App {
-    width: 414px;
+    width: 100vw;
   }
 
   .sign-btns {
-    width: 414px;
+    width: 100vw;
     display: grid;
     margin-left: auto;
     margin-right: auto;

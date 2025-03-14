@@ -29,15 +29,15 @@ function DreamInterpreter() {
               {
                 role: "system",
                 content:
-                  "You are a mystical dream interpreter with deep knowledge of symbolism, psychology, and spiritual meanings. Your interpretations are poetic, insightful, and rooted in mythology and subconscious analysis.",
+                  "You are a dream interpreter with deep knowledge of symbolism, psychology, and spiritual meanings. Your interpretations are insightful, and rooted in mythology and subconscious analysis.",
               },
               {
                 role: "user",
                 content: `I had the following dream: "${dream}". What does it mean? Provide a deep and mystical interpretation that includes psychological and symbolic insights.`,
               },
             ],
-            max_tokens: 450,
-            temperature: 1.0,
+            max_tokens: 380,
+            temperature: 0.8,
             top_p: 0.8,
           },
           {

@@ -36,8 +36,8 @@ function DreamInterpreter() {
                 content: `I had the following dream: "${dream}". What does it mean? Provide a deep and mystical interpretation that includes psychological and symbolic insights.`,
               },
             ],
-            max_tokens: 380,
-            temperature: 0.8,
+            max_tokens: 400,
+            temperature: 1.2,
             top_p: 0.8,
           },
           {

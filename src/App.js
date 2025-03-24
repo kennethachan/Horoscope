@@ -1,6 +1,6 @@
 import "./App.css"
 import React from 'react';
-import { Route, Routes } from "react-router-dom"
+import { BrowserRouter,Route, Routes } from "react-router-dom"
 import Home from "../src/pages/Home"
 import AriesHoroscope from "./pages/AriesHoroscope"
 import TaurusHoroscope from "./pages/TaurusHoroscope"
@@ -20,6 +20,7 @@ import MyDreams from "./pages/MyDreams"
 function App() {
   return (
     <div className="App">
+      <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/whatsmysign" element={<WhatsMySign />} />
@@ -37,6 +38,7 @@ function App() {
         <Route path="/aquarius-horoscope" element={<AquariusHoroscope />} />
         <Route path="/pisces-horoscope" element={<PiscesHoroscope />} />
       </Routes>
+      </BrowserRouter>
     </div>
   )
 }
